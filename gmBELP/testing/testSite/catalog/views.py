@@ -3,8 +3,15 @@ from django.http import HttpResponse
 from . import urls
 
 # Create your views here.
-
+from django.views import generic
 from .models import Book, Author, BookInstance, Genre
+
+class BookListView(generic.ListView):
+    model = Book
+
+
+
+
 
 def index(request):
     """View function for home page of site."""
@@ -28,3 +35,6 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+class BookDetailView(generic.DetailView):
+    model = Book
