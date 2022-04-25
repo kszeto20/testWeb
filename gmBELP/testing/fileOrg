@@ -1,0 +1,6 @@
+file set up:
+
+gmBELP - organizational folder (mine)
+testing - django_projects (equivalent)
+testSite (upper level) - local library (upper level)
+testSite (lower level) - testSite (lower level)
